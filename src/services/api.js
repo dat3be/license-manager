@@ -1,7 +1,7 @@
 // src/services/api.js
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = 'http://localhost:3000';
 
 export const getCustomers = () => axios.get(`${API_BASE_URL}/customers`);
 export const createCustomer = (customer) => axios.post(`${API_BASE_URL}/customers`, customer);

@@ -5,9 +5,10 @@ import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import { AppstoreOutlined, UserOutlined, KeyOutlined, PlusOutlined, UnorderedListOutlined } from '@ant-design/icons';
 import LicenseForm from './components/License/LicenseForm';
-import CustomerForm from './components/Customer/CustomerForm'; // Ensure this path is correct
+import CustomerForm from './components/Customer/CustomerForm';
 import ProductForm from './components/Product/ProductForm';
 import ProductList from './components/Product/ProductList';
+import AddProductPage from './components/Product/AddProductPage';
 import './styles.css';
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -44,7 +45,7 @@ function App() {
             <div className="site-layout-background" style={{ padding: 24, width: '100%', maxWidth: '800px', marginTop: '20px' }}>
               <Routes>
                 <Route path="/licenses" element={<LicenseForm />} />
-                <Route path="/products/new" element={<ProductForm />} />
+                <Route path="/products/new" element={<AddProductPage />} />
                 <Route path="/products/all" element={<ProductList />} />
                 <Route path="/customers" element={<CustomerForm />} />
               </Routes>

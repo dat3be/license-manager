@@ -22,7 +22,9 @@ const ProductForm = ({ initialData = {}, onSuccess }) => {
       if (product.id) {
         await editProduct(product.id, product);
       } else {
-        await addProduct(product);
+        // Generate a new Product ID
+        const newProduct = { ...product, id: `prod-${Date.now()}` };
+        await addProduct(newProduct);
       }
       onSuccess();
     } catch (error) {
